@@ -1,0 +1,262 @@
+html {
+  background-image: url("http://cdn.backgroundhost.com/backgrounds/subtlepatterns/arches.png");
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-weight: 400;
+  color: #555555;
+  opacity: 0.75;
+  text-align: center; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border: 0;
+  padding: 0;
+  margin: 0 auto;
+  flex-direction: column; }
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 100%;
+  width: 436px;
+  height: 436px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12), 8px 6px 10px rgba(0, 0, 0, 0.38); }
+
+.controls {
+  position: absolute;
+  background-color: #d1d1d1;
+  height: 180px;
+  width: 180px;
+  border-radius: 150px;
+  border: 12px solid black; }
+  .controls h2 {
+    text-align: center;
+    margin: 10px auto 0 auto;
+    width: 100%; }
+  .controls div p {
+    font-size: 0.6rem;
+    margin-bottom: 8px; }
+
+.control__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-evenly; }
+
+.count .display {
+  border: 4px solid black;
+  background-color: #430710;
+  width: 40px;
+  border-radius: 5px; }
+.count .display--inactive {
+  color: #430710; }
+.count .display--active {
+  color: #dc0d29; }
+
+.start button {
+  background-color: #eb0625;
+  border: 4px solid black;
+  height: 25px;
+  width: 25px;
+  border-radius: 100%; }
+
+.strict {
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .strict .strict__indicator {
+    height: 7px;
+    width: 7px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-bottom: 4px; }
+  .strict button {
+    background-color: #ffee07;
+    border: 4px solid black;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%; }
+  .strict .strict__indicator--inactive {
+    background-color: black; }
+  .strict .strict__indicator--active {
+    background-color: #f00000; }
+
+.control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; }
+  .control .toggle {
+    width: 40px;
+    height: 20px;
+    background-color: black;
+    border-radius: 3px;
+    margin: 0 3px;
+    border: 0;
+    padding: 0; }
+    .control .toggle h3 {
+      display: inline;
+      font-size: 1rem; }
+  .control .switch {
+    height: 20px;
+    width: 20px;
+    background-color: #3193de;
+    border: 2px solid black; }
+  .control .switch--inactive {
+    border-radius: 3px 0 0 3px; }
+  .control .switch--active {
+    margin-left: 20px;
+    border-radius: 0 3px 3px 0; }
+
+.top {
+  display: flex;
+  margin-bottom: -12px; }
+  .top div {
+    width: 224px;
+    height: 224px; }
+
+.bot {
+  display: flex; }
+  .bot div {
+    width: 224px;
+    height: 224px; }
+    .bot div :hover {
+      cursor: pointer; }
+
+.red {
+  border-radius: 0 224px 0 0;
+  border: 12px solid black;
+  overflow: hidden; }
+
+.red--inactive {
+  background-color: #a70707; }
+
+.red--active {
+  background-color: #e00606; }
+
+.blue {
+  border-radius: 0 0 224px 0;
+  border: 12px solid black;
+  overflow: hidden; }
+
+.blue--inactive {
+  background-color: #1644db; }
+
+.blue--active {
+  background-color: #174dff; }
+
+.green {
+  border-radius: 224px 0 0 0;
+  border: 12px solid black;
+  overflow: hidden;
+  margin-right: -6px; }
+
+.green--inactive {
+  background-color: #0c610c; }
+
+.green--active {
+  background-color: #15aa15; }
+
+.yellow {
+  border-radius: 0 0 0 224px;
+  border: 12px solid black;
+  overflow: hidden;
+  margin-right: -6px; }
+
+.yellow--inactive {
+  background-color: #d4d40c; }
+
+.yellow--active {
+  background-color: #f8f811; }
+
+.alert {
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px; }
+
+.userMsg {
+  font-size: 1.5rem; }
+
+@media (max-width: 500px) {
+  .row {
+    width: 287px;
+    height: 287px; }
+
+  .bot div {
+    top: 40px;
+    width: 150px;
+    height: 150px;
+    left: 50%; }
+
+  .top div {
+    top: 40px;
+    width: 150px;
+    height: 150px;
+    left: 50%; }
+
+  .controls {
+    position: absolute;
+    background-color: #d1d1d1;
+    height: 130px;
+    width: 130px;
+    border-radius: 70px;
+    border: 5px solid black; }
+    .controls h2 {
+      margin: 5px auto 0 auto; }
+    .controls div p {
+      font-size: 0.3rem;
+      margin-bottom: 5 px; }
+
+  .count .display {
+    border: 2px solid black;
+    width: 25px;
+    border-radius: 5px;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+  .start button {
+    background-color: #eb0625;
+    border: 4px solid black;
+    height: 25px;
+    width: 25px;
+    border-radius: 100%; }
+
+  .strict .strict__indicator {
+    height: 4px;
+    width: 4px;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin-bottom: 2px;
+    margin-top: 0; }
+  .strict button {
+    background-color: #ffee07;
+    border: 2px solid black;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%; }
+
+  .footer {
+    font-size: 0.75rem; } }
+
+/*# sourceMappingURL=main.css.map */

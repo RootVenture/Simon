@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Simon Says</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="alert">
+      <span class="userMsg"></span>
+    </div>
+    <div class="row">
+      <div class="controls">
+        <h2>Simon</h2>
+        <div class="control__inner">
+          <div class="count">
+            <h3 class="display display--inactive">--</h3>
+            <p>COUNT</p>
+          </div>
+          <div class="start">
+            <button class="start"></button>
+            <P>START</P>
+          </div>
+          <div class="strict">
+            <h3 class="strict__indicator strict__indicator--inactive"></h3>
+            <button class="strict"></button>
+            <P>STRICT</P>
+          </div>
+        </div>
+        <div class="control">
+          <p>OFF</p>
+          <button class="toggle">
+            <div class="switch switch--inactive">
+            </div>
+          </button>
+          <p>ON</p>
+        </div>
+      </div>
+      <div class="top">
+        <div id="green" class="green green--inactive"></div>
+        <div id="red" class="red red--inactive"></div>
+      </div>
+      <div class="bot">
+        <div id="yellow" class="yellow yellow--inactive"></div>
+        <div id="blue" class="blue blue--inactive"></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer">
+    <p>by
+      <span>
+        <a href="http://www.raywu.me" target="_blank">Raymond Wu</a>
+      </span>
+      a
+      <em>FreeCodeCamp</em> Project
+    </p>
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
