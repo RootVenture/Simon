@@ -45,7 +45,7 @@ function startSequence() {
 			player();
 			clearInterval(interval);
 		}
-	}, 1000 + (i + 1) * 1000);
+	}, 1000 + (i + 1) * 500);
 }
 
 function player() {
@@ -63,7 +63,7 @@ function checkMove(clicked, correct) {
 			if (count === historyIdx) {
 				count++;
 				// User Story: I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
-				if (count > 20) {
+				if (count > sequence.length) {
 					game = false; // stop game
 					userMsg.innerHTML =
 						"Congratulations, you have won the game! Do you want to play again?";
@@ -106,7 +106,7 @@ function wrongMove(select) {
 
 // User Story: I can see how many steps are in the current series of button presses.
 function updateCount() {
-	display.innerHTML = count > 10 ? count : `0${count}`;
+	display.innerHTML = count >= 10 ? count : `0${count}`;
 }
 
 // User Story: If I want to restart, I can hit a button to do so, and the game will return to a single step.
@@ -121,6 +121,7 @@ function clearGame() {
 		strictMode = false;
 	}
 	setTimeout(() => {
+		userMsg.innerHTML = "";
 		startGame();
 	}, 1000);
 }
