@@ -14,7 +14,7 @@ let count = 1;
 let historyIdx = 0;
 let playerTurn = false;
 let strictMode = false;
-let game = true;
+let game = false;
 
 // User Story: I am presented with a random series of button presses.
 function generateMoves() {
@@ -175,7 +175,7 @@ function handleClick(e, section) {
 }
 
 function startGame() {
-	game = true;
+	game = !game;
 	generateMoves(); // set up the sequence for the game
 	updateCount();
 	// if toggled active, allow start
